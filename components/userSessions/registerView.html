@@ -6,19 +6,19 @@
 	    <br>
 	    <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Handler / Username">
+            <input id="login-username" type="text" class="form-control" name="username" ng-model="reg.name" value="" placeholder="Handler / Username">
         </div>
 	    <br>
 
 	    <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="EMAIL">
+            <input id="login-email" type="text" class="form-control" name="email" ng-model="reg.email" value="" placeholder="EMAIL">
         </div>
 	    <br>
 
 	    <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input id="login-password" type="password" class="form-control" name="password" placeholder="PASSWORD">
+            <input id="login-password" type="password" class="form-control" name="password" ng-model="reg.password" placeholder="PASSWORD">
         </div>
 	    <br>
 
@@ -29,7 +29,7 @@
 	    </div> -->
 	    
 
-	    <button class="btn btn-lg btn-success btn-block" type="submit">Sign Up</button>
+	    <button class="btn btn-lg btn-success btn-block" ng-click="reg.addUser()" type="submit">Sign Up</button>
 
 	</form>
 

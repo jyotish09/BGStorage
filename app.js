@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var bgStorage = angular.module('bgStorage',['ui.router','firebase']);
+	var bgStorage = angular.module('bgStorage',['ui.router']);
 
 	bgStorage.config(function ($stateProvider, $urlRouterProvider) {
 		
@@ -12,7 +12,9 @@
 		
 			.state('intro',{
 				url:'/intro',
-				templateUrl:'components/intro/introView.html'
+				templateUrl:'components/intro/introView.html',
+				controller:'LoginController as login'
+
 			})
 
 			.state('login',{
@@ -22,7 +24,14 @@
 
 			.state('register',{
 				url:'/register',
-				templateUrl:'components/userSessions/registerView.html'
+				templateUrl:'components/userSessions/registerView.html',
+				controller:'RegisterController as reg'
+			})
+
+			.state('smartphone',{
+				url:'/smartphone',
+				templateUrl:'components/smartphone/smartphoneView.html'//,
+				//controller:'RegisterController as reg'
 			});
 
 			
@@ -32,5 +41,23 @@
 	bgStorage.run(['$state', function ($state) {
    		$state.transitionTo('intro');
 	}]);
+
+	var config = {
+	   apiKey: "AIzaSyD04CJo57Qapkf-wSn7OS-ve7pEiLmciCE",
+	   authDomain: "buyingguide-a0558.firebaseapp.com",
+	   databaseURL: "https://buyingguide-a0558.firebaseio.com",
+	   storageBucket: "buyingguide-a0558.appspot.com",
+	 	};
+	firebase.initializeApp(config);
+
+	var rootRef = firebase.database().ref();
+
+	//console.log(rootRef);
+
+	angular.module('bgStorage').factory('firebaseRef', function($firebaseArray){
+        var ref = rootRef;
+        return ref;
+    });
+
 
 })();

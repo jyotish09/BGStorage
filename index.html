@@ -30,7 +30,7 @@
 		        <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="glyphicon glyphicon-plus"></span> ADD
 		        <span class="caret"></span></a>
 		        <ul class="dropdown-menu">
-		          <li><a href="#">Smartphone</a></li>
+		          <li><a ui-sref="smartphone">Smartphone</a></li>
 		        </ul>
 		      </li>
 		      <li class="dropdown">
@@ -58,6 +58,7 @@
 	</body>
 
 	<!-- Dependencies -->
+
 	<!-- Bootstrap -->
 	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -65,9 +66,17 @@
 	<!-- AngularJS + Router + Firebase -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	<!-- Holding off Firebase until stable AngularFire is released --> 
+	
+	<!-- 	
 	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script> 
+	-->
 
+
+	<!-- My Scripts -->
 	<script src="app.js"></script>
+	<script src="components/userSessions/registerController.js"></script>
+	<script src="components/userSessions/loginController.js"></script>
 
 </html>
