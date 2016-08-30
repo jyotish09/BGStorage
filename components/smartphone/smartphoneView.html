@@ -1,12 +1,139 @@
 <br/>
 <div class="jumbotron text-center bg">
   <h2>Smartphone</h2>
- 	<div class="bs-callout bs-callout-primary">
+ 	<!-- <div class="bs-callout bs-callout-primary">
 	 	<p>
 	 	{ Specs[string] + Rating[int] } 
 	 	</p>
-	</div>
+	</div> -->
   <p>
+  	<form class="form-inline">
+	  <div class="form-group">
+	    <label>Company &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.company" placeholder="Samsung">
+	  </div>
+	  &nbsp;
+	  <div class="form-group">
+	    <label>Phone Name &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.name" placeholder="S7 Edge">
+	  </div>
+	  &nbsp;
+	  <div class="form-group">
+	    <label>Model Name {Global/Indian} :&nbsp;</label>
+	    <input type="text" class="form-control" ng-model="smartphone.model" placeholder="G935F">
+	  </div>
+	<br>
+	<br>
+	</form>
+	<div class="bs-callout bs-callout-danger">
+		<h3>{ Specs[string] + Rating[int] }</h3>
+	</div>
 
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label>Platform : &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.platform" placeholder="Android">
+	  </div>
+	  &nbsp;
+	  <div class="form-group">
+	    <input type="text" class="form-control" ng-model="smartphone.platformInfo" placeholder="Touch Wiz UI">
+	  </div>
+	  &nbsp;
+	</form>
+
+	<br><br>
+
+	<form class="form-inline">
+	  &nbsp;
+	  <div class="form-group">
+	    <label>GPU : &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.gpu" placeholder="Mali-T880">
+	  </div>
+		<div class="form-group">
+	    <label>Chipset : &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.chipset" placeholder="Exynos 8890">
+	  </div>
+		&nbsp;
+	  <div class="form-group">
+	    <input type="text" class="form-control" ng-model="smartphone.chipInfo" placeholder="8890 4x2.3 GHz Mongoose 4x1.6 GHz Cortex-A53">
+	  </div>
+	  <!-- &nbsp;
+	  <div class="form-group">
+	    <label>Power/Performance Rating :&nbsp; </label>
+		<select ng-model="smartphone.rating" class="form-control">
+		  <option selected="selected">0</option>
+		  <option>1</option>
+		  <option>2</option>
+		  <option>3</option>
+		  <option>4</option>
+		  <option>5</option>
+		  <option>6</option>
+		  <option>7</option>
+		  <option>8</option>
+		  <option>9</option>
+		  <option>10</option>
+		</select>
+	  </div> -->
+	</form>
+	<br>
+	<br>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label>RAM : &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.ram" placeholder="4 GB">
+	  </div>
+	  &nbsp;
+	  <div class="form-group">
+	    <label>Internal Memory : &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.internal" placeholder="32 GB">
+	  </div>
+	  &nbsp;
+	  <div class="form-group">
+	  	<input type="checkbox" class="checkbox" ng-model="smartphone.cb" ng-change="smartphone.cbSelected()" />
+	    <label >External Memory &nbsp; </label>
+	    <input type="text" class="form-control" ng-show='smartphone.cb' ng-model="smartphone.external" placeholder="32/64/256 GB {split with / }">
+	  </div>
+	</form>
+	<br>
+	<br>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label>CAMERA : &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.camera" placeholder="12 MP">
+	  </div>
+	  &nbsp;
+	  <div class="form-group">
+	    <input type="text" class="form-control" ng-model="smartphone.cameraInfo" placeholder="f/1.7, 26mm">
+	  </div>
+	</form>
+	<br>
+	<br>
+
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label>DISPLAY : &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.display" placeholder="535 ppi">
+	  </div>
+	   &nbsp;
+	  <div class="form-group">
+	    <input type="text" class="form-control" ng-model="smartphone.displayInfo" placeholder="AMOLED 2K">
+	  </div>
+	  &nbsp;
+	</form>
+	<br>
+	<br>
+	<form class="form-inline">
+	  <div class="form-group">
+	  	<label > SAR &nbsp; </label>
+	    <input type="text" class="form-control" ng-model="smartphone.sar" placeholder=".26 Head .51 Body">
+	  </div>
+	</form>
+	<!-- <label> Genres : &nbsp </label> 
+	<input type="text" class="form-control" placeholder="(Seperate them by ,)" ng-model="smartphone.genres"> -->
+	<br>
+	<br>
+	<button class="btn btn-primary" ng-click="addTrack()">
+	<span class="glyphicon glyphicon-floppy-disk" ></span> Save
+	</button>
   </p>
 </div>
