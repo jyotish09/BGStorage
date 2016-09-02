@@ -1,16 +1,12 @@
 <br/>
 <div class="jumbotron text-center bg">
   <h2>Smartphone</h2>
- 	<!-- <div class="bs-callout bs-callout-primary">
-	 	<p>
-	 	{ Specs[string] + Rating[int] } 
-	 	</p>
-	</div> -->
+
   <p>
   	<form class="form-inline">
 	  <div class="form-group">
 	    <label>Company &nbsp; </label>
-	    <input type="text" class="form-control" ng-model="smartphone.company" placeholder="Samsung">
+	    <input type="text" class="form-control" ng-model="smartphone.company" value="TEXT">
 	  </div>
 	  &nbsp;
 	  <div class="form-group">
@@ -19,14 +15,33 @@
 	  </div>
 	  &nbsp;
 	  <div class="form-group">
-	    <label>Model Name {Global/Indian} :&nbsp;</label>
+	    <label>Model Name {Indian Market} :&nbsp;</label>
 	    <input type="text" class="form-control" ng-model="smartphone.model" placeholder="G935F">
 	  </div>
 	<br>
 	<br>
 	</form>
-	<div class="bs-callout bs-callout-danger">
-		<h3>{ Specs[string] + Rating[int] }</h3>
+	<form class="form-inline">
+
+		<div class="form-group">
+			<label > Price&nbsp; </label>
+		<input type="text" class="form-control" ng-model="smartphone.price" placeholder="₹ 56,000">
+		</div>
+		  &nbsp;
+		  &nbsp;
+		<form class="form-inline">
+			<label> Price Range&nbsp; : 
+			<input type="text" ng-disabled={true} class="form-control" ng-model="smartphone.priceRange.value" placeholder={{smartphone.priceRange.value}}>
+			</label> 
+			<rzslider rz-slider-model="smartphone.priceRange.value"></rzslider>	
+		</form> 
+
+	</form>	
+	<br>
+	<br>
+
+	<div class="bs-callout bs-callout-primary">
+		<h3>{ Specs[string] } </h3>
 	</div>
 
 	<form class="form-inline">
@@ -57,23 +72,6 @@
 	  <div class="form-group">
 	    <input type="text" class="form-control" ng-model="smartphone.chipInfo" placeholder="8890 4x2.3 GHz Mongoose 4x1.6 GHz Cortex-A53">
 	  </div>
-	  <!-- &nbsp;
-	  <div class="form-group">
-	    <label>Power/Performance Rating :&nbsp; </label>
-		<select ng-model="smartphone.rating" class="form-control">
-		  <option selected="selected">0</option>
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
-		  <option>6</option>
-		  <option>7</option>
-		  <option>8</option>
-		  <option>9</option>
-		  <option>10</option>
-		</select>
-	  </div> -->
 	</form>
 	<br>
 	<br>
@@ -128,8 +126,45 @@
 	    <input type="text" class="form-control" ng-model="smartphone.sar" placeholder=".26 Head .51 Body">
 	  </div>
 	</form>
-	<!-- <label> Genres : &nbsp </label> 
-	<input type="text" class="form-control" placeholder="(Seperate them by ,)" ng-model="smartphone.genres"> -->
+	<br>
+	<br>
+	
+	<div class="bs-callout bs-callout-primary">
+		<h3>{ Rating[int] }</h3>
+	</div>
+ 
+	<br>
+	<br>
+	<form class="form-inline">
+		<label > Performance &nbsp; :
+			<input type="text" ng-disabled={true} class="form-control" ng-model="smartphone.performanceRange.value" placeholder={{smartphone.performanceRange.value}}>
+		</label>
+		<rzslider rz-slider-model="smartphone.performanceRange.value"></rzslider>	
+	</form>  
+	<br>
+	<br>
+	<form class="form-inline">
+		<label > Camera &nbsp; : 
+			<input type="text" ng-disabled={true} class="form-control" ng-model="smartphone.cameraRange.value" placeholder={{smartphone.cameraRange.value}}>
+		</label>
+		<rzslider rz-slider-model="smartphone.cameraRange.value"></rzslider>	
+	</form>  
+	<br>
+	<br>
+	<form class="form-inline">
+		<label > Battery Life &nbsp; : 
+			<input type="text" ng-disabled={true} class="form-control" ng-model="smartphone.batteryRange.value" placeholder={{smartphone.batteryRange.value}}>
+		</label>
+		<rzslider rz-slider-model="smartphone.batteryRange.value"></rzslider>	
+	</form>  
+	<br>
+	<br>
+	<form class="form-inline">
+		<label > Build Quality &nbsp; : 
+			<input type="text" ng-disabled={true} class="form-control" ng-model="smartphone.buildQuality.value" placeholder={{smartphone.buildQuality.value}}>
+		</label>
+		<rzslider rz-slider-model="smartphone.buildQuality.value"></rzslider>	
+	</form>  
 	<br>
 	<br>
 	<button class="btn btn-primary" ng-click="addTrack()">
@@ -137,3 +172,5 @@
 	</button>
   </p>
 </div>
+
+<!-- PRICE AND PERFORMANCE POINTS -->

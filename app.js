@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var bgStorage = angular.module('bgStorage',['ui.router']);
+	var bgStorage = angular.module('bgStorage',['ui.router','rzModule','ui.bootstrap']);
 
 	bgStorage.config(function ($stateProvider, $urlRouterProvider) {
 		
@@ -30,8 +30,8 @@
 
 			.state('smartphone',{
 				url:'/smartphone',
-				templateUrl:'components/smartphone/smartphoneView.html'//,
-				//controller:'RegisterController as reg'
+				templateUrl:'components/smartphone/smartphoneView.html',
+				controller:'SmartphoneController as smartphone'
 			});
 
 			
